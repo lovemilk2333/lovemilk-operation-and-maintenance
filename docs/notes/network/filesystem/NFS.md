@@ -71,7 +71,7 @@ sudo exportfs -a
 | | - |
 | `anonuid` | 匿名 `uid` (`nfsnobody`) 的服务端本地映射用户 `uid` | `nfsnobody` |
 | `anongid` | 匿名 `gid` (`nfsnobody`)  的服务端本地映射用户 `gid` | `nfsnobody` |
-| `sec` | 认证方式, 参见[在 NFS 中使用 Kerberos](#在-nfs-中使用-kerberos) | `sys` 不使用 Kerberos |
+| `sec` | 认证方式, 参见[在 NFS 中使用 Kerberos](#在-nfs-中使用-kerberos) | `sys` (不使用 Kerberos) |
 
 > 查看完整配置, 请参阅 [exports(5): NFS server export table - Linux man page](https://linux.die.net/man/5/exports)
 
@@ -359,7 +359,7 @@ _kerberos-adm._udp.example.com. SRV   0 0 749 kerberos.example.com.
 > sudo systemctl start rpc-gssd
 > ```
 
-<!-- > sudo modprobe nfs -->
+> 或者, 尝试重启客户端后再试
 
 ## 客户端配置
 1. 修改 `/etc/krb5.conf` 以添加服务端  
