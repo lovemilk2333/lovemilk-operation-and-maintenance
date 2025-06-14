@@ -101,6 +101,7 @@ sudo mount 192.168.1.1:/nfs-shared /mnt/nfs-shared
 ```fstab
 192.168.1.1:/nfs-shared /mnt/nfs-shared nfs rw,rsize=8192,wsize=8192,timeo=14,intr
 ```
+> 使用 `nofail` 选项以免挂载失败导致系统 panic
 
 ## 常见 `option`
 | 配置 | 描述 | (是)默认值 |
